@@ -1,0 +1,7 @@
+{
+  "name": "swiperJam",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
