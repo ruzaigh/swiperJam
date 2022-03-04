@@ -29,8 +29,46 @@ export class Tab3Page {
       _id: 3,
       imageUrl: '../../assets/images/post4.jpeg'
     },
+    {
+      _id: 4,
+      imageUrl: '../../assets/images/post5.jpeg'
+    },
+    {
+      _id: 5,
+      imageUrl: '../../assets/images/post6.jpeg'
+    },
+    {
+      _id: 6,
+      imageUrl: '../../assets/images/post7.jpeg'
+    },
+    {
+      _id: 7,
+      imageUrl: '../../assets/images/post8.jpeg'
+    },
+    {
+      _id: 8,
+      imageUrl: '../../assets/images/post9.jpeg'
+    },
+    {
+      _id: 9,
+      imageUrl: '../../assets/images/post10.webp'
+    },
+    {
+      _id: 10,
+      imageUrl: '../../assets/images/post11.png'
+    },
+    {
+      _id: 11,
+      imageUrl: '../../assets/images/post12.jpeg'
+    },
   ];
+
+  filterName: string = 'COMMENTS';
   constructor(
   ) {}
-
+  fliterSelected(name:  string){
+    if(name === 'COMMENTS') return this.filterName = name;
+    if(name === 'EDITIONS') return this.filterName = name;
+    if(name === 'METADATA') return this.filterName = name;
+  }
 }

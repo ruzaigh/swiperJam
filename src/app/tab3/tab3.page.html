@@ -20,7 +20,7 @@
           <div class="profile-container">
             <div class="profile-left">
               <div class="back">
-                <ion-icon name="arrow-round-back"></ion-icon>
+                <ion-icon name="arrow-back"></ion-icon>
               </div>
               <div class="profile-wrapper">
                 <div class="image-wrapper">
@@ -36,7 +36,7 @@
               </div>
             </div>
             <div class="profile-right">
-              <ion-icon name="more"></ion-icon>
+              <ion-icon name="settings"></ion-icon>
             </div>
           </div>
           <div class="image-wrapper">
@@ -45,9 +45,11 @@
         </div>
         <div class="bottom">
           <div class="btn-wrapper">
-            <ion-button class="like-btn">Like 34</ion-button>
+            <ion-button class="like-btn">🔥 34</ion-button>
             <ion-button class="collect-btn"> Collect</ion-button>
-            <ion-button  class="share-btn"> Share</ion-button>
+            <ion-button  class="share-btn">
+              <ion-icon name="share"></ion-icon>
+            </ion-button>
           </div>
           <div class="description-container">
             <div class="title">
@@ -59,10 +61,139 @@
               A moment of discovery - our narrative and character has been given life.
             </div>
           </div>
+
           <div class="filter-container">
-          <div class="block">Comments</div>
-            <div class="block">Editions</div>
-            <div class="block">Metadata</div>
+            <div (click)="fliterSelected('COMMENTS')" [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' " >Comments</div>
+            <div (click)="fliterSelected('EDITIONS')" [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
+            <div (click)="fliterSelected('METADATA')" [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
+          </div>
+
+          <div class="filtered-box">
+            <div *ngIf="filterName === 'COMMENTS'"  class="comments-filter-container">
+              <div class="filter-wrapper">
+                <div class="comment-text-wrapper">
+                  <div class="commet-text">Comments <span class="commet-text total">27</span></div>
+                  <div class="avatar-wrapper">
+                    <img src="../../assets/images/post16.jpeg" alt="">
+                  <div class="actual-comment-text"> 1 hundred eth and i’m still on the grind 💪💪💪...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="filterName === 'EDITIONS'" class="editions-filter-container">
+              <div class="filter-wrapper">
+              <div class="editions-wrapper">
+                <div class="editions-container">
+                  <div class="edition-image-wrapper">
+                    <img src="../../assets/images/post16.jpeg" alt="">
+                  </div>
+                  <div class="edition-info">
+                    <div class="edition-text">Owned by</div>
+                    <div class="edition-text owner">slicedbread</div>
+                  </div>
+                </div>
+                <div class="editions-number">Editon 1</div>
+              </div>
+              <div class="editions-wrapper">
+                <div class="edition-btn">View on chain</div>
+                <div class="edition-btn collect">Collect</div>
+
+              </div>
+              </div>
+              <div class="filter-wrapper">
+                <div class="editions-wrapper">
+                  <div class="editions-container">
+                    <div class="edition-image-wrapper">
+                      <img src="../../assets/images/post15.jpeg" alt="">
+                    </div>
+                    <div class="edition-info">
+                      <div class="edition-text">Owned by</div>
+                      <div class="edition-text owner">slicedcheese</div>
+                    </div>
+                  </div>
+                  <div class="editions-number">Editon 2</div>
+                </div>
+                <div class="editions-wrapper">
+                  <div class="edition-btn">View on chain</div>
+                  <div class="edition-btn collect">Collect</div>
+
+                </div>
+              </div>
+              <div class="filter-wrapper">
+                <div class="editions-wrapper">
+                  <div class="editions-container">
+                    <div class="edition-image-wrapper">
+                      <img src="../../assets/images/post14.jpeg" alt="">
+                    </div>
+                    <div class="edition-info">
+                      <div class="edition-text">Owned by</div>
+                      <div class="edition-text owner">JohnnyWho</div>
+                    </div>
+                  </div>
+                  <div class="editions-number">Editon 3</div>
+                </div>
+                <div class="editions-wrapper">
+                  <div class="edition-btn">View on chain</div>
+                  <div class="edition-btn collect">Collect</div>
+
+                </div>
+              </div>
+              <div class="filter-wrapper">
+                <div class="editions-wrapper">
+                  <div class="editions-container">
+                    <div class="edition-image-wrapper">
+                      <img src="../../assets/images/post13.jpeg" alt="">
+                    </div>
+                    <div class="edition-info">
+                      <div class="edition-text">Owned by</div>
+                      <div class="edition-text owner">Uknown</div>
+                    </div>
+                  </div>
+                  <div class="editions-number">Editon 4</div>
+                </div>
+                <div class="editions-wrapper">
+                  <div class="edition-btn">View on chain</div>
+                  <div class="edition-btn collect">Collect</div>
+
+                </div>
+              </div>
+            </div>
+            <div *ngIf="filterName === 'METADATA'" class="metadata-filter-container">
+              <div class="filter-wrapper">
+                <div class="unlockable-wrapper">
+               <img src="assets/icon/lock.svg">
+                <span class="unlockable-text"> Unlockable Content Available</span>
+                </div>
+              </div>
+              <div class="filter-wrapper">
+                <div class="plagiarism-text">
+                Plagiarism Report: <span class="plagiarism-text percentage">98% Match</span>
+                </div>
+              </div>
+              <div class="filter-wrapper">
+                <div class="royalty-title"> Royalty Split</div>
+                <div class="royalty-wrapper">
+                  <div class="user-wrapper">
+                    <img src="assets/images/post6.png" alt="">
+                    Ruz
+                  </div>
+                  <div class="user-percentage"> 50%</div>
+                </div>
+                <div class="royalty-wrapper">
+                  <div class="user-wrapper">
+                    <img src="assets/images/post8.jpeg" alt="">
+                    You
+                  </div>
+                  <div class="user-percentage"> 50%</div>
+                </div>
+              </div>
+              <div class="filter-wrapper">
+                <div class="usesage-right-wrapper">
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use license
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
