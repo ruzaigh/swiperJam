@@ -36,6 +36,19 @@
 @import "~swiper/css/pagination";
 @import '~@ionic/angular/css/ionic-swiper';
 
-swiper{
-  height: 100%;
+
+
+.mySwiper{
+  .swiper-wrapper {
+    //position: relative;
+    //width: unset !important;
+    background: #161616;
+    //z-index: 1;
+    //display: flex;
+    //transition-property: transform;
+    //box-sizing: content-box;
+  }
+  .swiper-pagination{
+      display: none;
+  }
 }

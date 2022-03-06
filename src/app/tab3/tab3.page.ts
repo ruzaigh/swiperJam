@@ -35,7 +35,7 @@ export class Tab3Page {
     },
     {
       _id: 5,
-      imageUrl: '../../assets/images/post6.jpeg'
+      imageUrl: '../../assets/images/post6.png'
     },
     {
       _id: 6,
@@ -51,18 +51,17 @@ export class Tab3Page {
     },
     {
       _id: 9,
-      imageUrl: '../../assets/images/post10.webp'
+      imageUrl: '../../assets/images/post10.png'
     },
     {
       _id: 10,
-      imageUrl: '../../assets/images/post11.png'
+      imageUrl: '../../assets/images/post11.jpeg'
     },
     {
       _id: 11,
-      imageUrl: '../../assets/images/post12.jpeg'
+      imageUrl: '../../assets/images/post12.png'
     },
   ];
-
   filterName: string = 'COMMENTS';
   constructor(
   ) {}
@@ -71,4 +70,6 @@ export class Tab3Page {
     if(name === 'EDITIONS') return this.filterName = name;
     if(name === 'METADATA') return this.filterName = name;
   }
+
+
 }
