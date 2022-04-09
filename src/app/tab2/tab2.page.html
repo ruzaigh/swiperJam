@@ -1,12 +1,6 @@
-
-
-<ion-content >
+<ion-content>
   <!--  1-->
-  <swiper
-    *ngIf="this.sliderName === 'SLIDER1'"
-    [grabCursor]="true"
-    [effect]="'creative'"
-    [creativeEffect]="{
+  <swiper *ngIf="this.sliderName === 'SLIDER1'" [grabCursor]="true" [effect]="'creative'" [creativeEffect]="{
         prev: {
           shadow: true,
           translate: [0, 0, -400]
@@ -14,234 +8,240 @@
         next: {
           translate: ['100%', 0, 0]
         }
-      }"
-    class="mySwiper"
-  >
-    <ng-template swiperSlide *ngFor="let post of postObject">
-      <div class="block" >
-        <div class="top">
-          <div class="profile-container">
-            <div class="profile-left">
-              <div class="back">
-                <ion-icon name="arrow-back"></ion-icon>
-              </div>
-              <div class="profile-wrapper">
-                <div class="image-wrapper">
-                  <img src="../../assets/images/post16.jpeg"></div>
-                <div class="profile-text-wrapper">
-                  <div class="text">Creator
-                    <div class="text bold">
-                      KidEight
+      }" class="mySwiper">
+      <ng-template swiperSlide *ngFor="let post of postObject">
+        <div class="block">
+          <div class="top">
+            <div class="profile-container">
+              <div class="profile-left">
+                <div class="back">
+                  <ion-icon name="arrow-back"></ion-icon>
+                </div>
+                <div class="profile-wrapper">
+                  <div class="image-wrapper">
+                    <img src="../../assets/images/post16.jpeg">
+                  </div>
+                  <div class="profile-text-wrapper">
+                    <div class="text">Creator
+                      <div class="text bold">
+                        KidEight
+                      </div>
                     </div>
-                  </div>
-                  <div class="follow">.Follow</div>
-                </div>
-              </div>
-            </div>
-            <div class="profile-right" (click)="openUpOption()">
-              <ion-icon name="settings" ></ion-icon>
-            </div>
-            <div *ngIf="optionOpen" (click)="closeOption()" class="option-container">
-              <div class="option-block">
-                <!--  1  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER1')">
-                  slide 1
-                </div>
-                <!--  2  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER2')" >
-                  slide 2
-                </div>
-                <!--  3  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER3')">
-                  slide 3
-                </div>
-                <!--  4  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER4')">
-                  slide 4
-                </div>
-                <!--  5  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER5')">
-                  slide 5
-                </div>
-                <!--  6  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER6')">
-                  slide 6
-                </div>
-                <!--  7   -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER7')">
-                  slide 7
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-          <div class="image-wrapper">
-            <img [src]="post.imageUrl">
-          </div>
-        </div>
-        <div class="bottom">
-          <div class="btn-wrapper">
-            <ion-button class="like-btn">🔥 34</ion-button>
-            <ion-button class="collect-btn"> Collect</ion-button>
-            <ion-button  class="share-btn">
-              <img src="assets/icon/Share.svg">
-            </ion-button>
-          </div>
-          <div class="description-container">
-            <div class="title">
-              The Creation of EVOL
-            </div>
-            <div class="description-text">
-              The Creation of our anti-hero, a true renaissance man.
-
-              A moment of discovery - our narrative and character has been given life.
-            </div>
-          </div>
-
-          <div class="filter-container">
-            <div (click)="fliterSelected('COMMENTS')" [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' " >Comments</div>
-            <div (click)="fliterSelected('EDITIONS')" [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
-            <div (click)="fliterSelected('METADATA')" [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
-          </div>
-
-          <div class="filtered-box">
-            <div *ngIf="filterName === 'COMMENTS'"  class="comments-filter-container">
-              <div class="filter-wrapper">
-                <div class="comment-text-wrapper">
-                  <div class="commet-text">Comments <span class="commet-text total">27</span></div>
-                  <div class="avatar-wrapper">
-                    <img src="../../assets/images/post16.jpeg" alt="">
-                    <div class="actual-comment-text"> 1 hundred eth and i’m still on the grind 💪💪💪...</div>
+                    <div class="follow">.Follow</div>
                   </div>
                 </div>
               </div>
+              <div class="profile-right" (click)="openUpOption()">
+                <ion-icon name="settings"></ion-icon>
+              </div>
+              <div *ngIf="optionOpen" (click)="closeOption()" class="option-container">
+                <div class="option-block">
+                  <!--  1  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER1')">
+                    slide 1
+                  </div>
+                  <!--  2  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER2')">
+                    slide 2
+                  </div>
+                  <!--  3  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER3')">
+                    slide 3
+                  </div>
+                  <!--  4  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER4')">
+                    slide 4
+                  </div>
+                  <!--  5  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER5')">
+                    slide 5
+                  </div>
+                  <!--  6  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER6')">
+                    slide 6
+                  </div>
+                  <!--  7  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER7')">
+                    slide 7
+                  </div>
+                </div>
+  
+              </div>
             </div>
-            <div *ngIf="filterName === 'EDITIONS'" class="editions-filter-container">
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
+            <div class="image-wrapper">
+              <img [src]="post.imageUrl">
+            </div>
+              <div class="btn-wrapper desktop">
+                <ion-button class="like-btn">🔥 34</ion-button>
+                <ion-button class="collect-btn"> Collect</ion-button>
+                <ion-button class="share-btn">
+                  <img src="assets/icon/Share.svg">
+                </ion-button>
+              </div>
+  
+          </div>
+          <div class="bottom">
+            <div class="btn-wrapper phone">
+              <ion-button class="like-btn">🔥 34</ion-button>
+              <ion-button class="collect-btn"> Collect</ion-button>
+              <ion-button class="share-btn">
+                <img src="assets/icon/Share.svg">
+              </ion-button>
+            </div>
+            <div class="description-container">
+              <div class="title">
+                The Creation of EVOL
+              </div>
+              <div class="description-text">
+                The Creation of our anti-hero, a true renaissance man.
+  
+                A moment of discovery - our narrative and character has been given life.
+              </div>
+            </div>
+  
+            <div class="filter-container">
+              <div (click)="fliterSelected('COMMENTS')"
+                [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' ">Comments</div>
+              <div (click)="fliterSelected('EDITIONS')"
+                [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
+              <div (click)="fliterSelected('METADATA')"
+                [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
+            </div>
+  
+            <div class="filtered-box">
+              <div *ngIf="filterName === 'COMMENTS'" class="comments-filter-container">
+                <div class="filter-wrapper">
+                  <div class="comment-text-wrapper">
+                    <div class="commet-text">Comments <span class="commet-text total">27</span></div>
+                    <div class="avatar-wrapper">
                       <img src="../../assets/images/post16.jpeg" alt="">
-                    </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">slicedbread</div>
+                      <div class="actual-comment-text"> 1 hundred eth and i’m still on the grind 💪💪💪...</div>
                     </div>
                   </div>
-                  <div class="editions-number">Editon 1</div>
-                </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
                 </div>
               </div>
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
-                      <img src="../../assets/images/post15.jpeg" alt="">
+              <div *ngIf="filterName === 'EDITIONS'" class="editions-filter-container">
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post16.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">slicedbread</div>
+                      </div>
                     </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">slicedcheese</div>
-                    </div>
+                    <div class="editions-number">Editon 1</div>
                   </div>
-                  <div class="editions-number">Editon 2</div>
-                </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
-                      <img src="../../assets/images/post14.jpeg" alt="">
-                    </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">JohnnyWho</div>
-                    </div>
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
                   </div>
-                  <div class="editions-number">Editon 3</div>
                 </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
-                      <img src="../../assets/images/post13.jpeg" alt="">
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post15.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">slicedcheese</div>
+                      </div>
                     </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">Uknown</div>
+                    <div class="editions-number">Editon 2</div>
+                  </div>
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
+                  </div>
+                </div>
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post14.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">JohnnyWho</div>
+                      </div>
                     </div>
+                    <div class="editions-number">Editon 3</div>
                   </div>
-                  <div class="editions-number">Editon 4</div>
-                </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
-                </div>
-              </div>
-            </div>
-            <div *ngIf="filterName === 'METADATA'" class="metadata-filter-container">
-              <div class="filter-wrapper">
-                <div class="unlockable-wrapper">
-                  <img src="assets/icon/lock.svg">
-                  <span class="unlockable-text"> Unlockable Content Available</span>
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="plagiarism-text">
-                  Plagiarism Report: <span class="plagiarism-text percentage">98% Match</span>
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="royalty-title"> Royalty Split</div>
-                <div class="royalty-wrapper">
-                  <div class="user-wrapper">
-                    <img src="assets/images/post6.png" alt="">
-                    Ruz
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
                   </div>
-                  <div class="user-percentage"> 50%</div>
                 </div>
-                <div class="royalty-wrapper">
-                  <div class="user-wrapper">
-                    <img src="assets/images/post8.jpeg" alt="">
-                    You
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post13.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">Uknown</div>
+                      </div>
+                    </div>
+                    <div class="editions-number">Editon 4</div>
                   </div>
-                  <div class="user-percentage"> 50%</div>
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
+                  </div>
                 </div>
               </div>
-              <div class="filter-wrapper">
-                <div class="usesage-right-wrapper">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use license
+              <div *ngIf="filterName === 'METADATA'" class="metadata-filter-container">
+                <div class="filter-wrapper">
+                  <div class="unlockable-wrapper">
+                    <img src="assets/icon/lock.svg">
+                    <span class="unlockable-text"> Unlockable Content Available</span>
+                  </div>
                 </div>
-
+                <div class="filter-wrapper">
+                  <div class="plagiarism-text">
+                    Plagiarism Report: <span class="plagiarism-text percentage">98% Match</span>
+                  </div>
+                </div>
+                <div class="filter-wrapper">
+                  <div class="royalty-title"> Royalty Split</div>
+                  <div class="royalty-wrapper">
+                    <div class="user-wrapper">
+                      <img src="assets/images/post6.png" alt="">
+                      Ruz
+                    </div>
+                    <div class="user-percentage"> 50%</div>
+                  </div>
+                  <div class="royalty-wrapper">
+                    <div class="user-wrapper">
+                      <img src="assets/images/post8.jpeg" alt="">
+                      You
+                    </div>
+                    <div class="user-percentage"> 50%</div>
+                  </div>
+                </div>
+                <div class="filter-wrapper">
+                  <div class="usesage-right-wrapper">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use
+                    license
+                  </div>
+  
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </ng-template>
+      </ng-template>
   </swiper>
   <!--  2-->
-  <swiper
-   *ngIf="this.sliderName === 'SLIDER2'"
-    [grabCursor]="true"
-    [effect]="'creative'"
-    [creativeEffect]="{
+  <swiper *ngIf="this.sliderName === 'SLIDER2'" [grabCursor]="true" [effect]="'creative'" [creativeEffect]="{
         prev: {
           shadow: true,
           translate: ['-120%', 0, -500]
@@ -250,229 +250,240 @@
           shadow: true,
           translate: ['120%', 0, -500]
         }
-      }"
-    class="mySwiper2"
-  >
-    <ng-template swiperSlide *ngFor="let post of postObject">
-      <div class="block" >
-        <div class="top">
-          <div class="profile-container">
-            <div class="profile-left">
-              <div class="back">
-                <ion-icon name="arrow-back"></ion-icon>
-              </div>
-              <div class="profile-wrapper">
-                <div class="image-wrapper">
-                  <img src="../../assets/images/post16.jpeg"></div>
-                <div class="profile-text-wrapper">
-                  <div class="text">Creator
-                    <div class="text bold">
-                      KidEight
+      }" class="mySwiper2">
+      <ng-template swiperSlide *ngFor="let post of postObject">
+        <div class="block">
+          <div class="top">
+            <div class="profile-container">
+              <div class="profile-left">
+                <div class="back">
+                  <ion-icon name="arrow-back"></ion-icon>
+                </div>
+                <div class="profile-wrapper">
+                  <div class="image-wrapper">
+                    <img src="../../assets/images/post16.jpeg">
+                  </div>
+                  <div class="profile-text-wrapper">
+                    <div class="text">Creator
+                      <div class="text bold">
+                        KidEight
+                      </div>
                     </div>
-                  </div>
-                  <div class="follow">.Follow</div>
-                </div>
-              </div>
-            </div>
-            <div class="profile-right" (click)="openUpOption()">
-              <ion-icon name="settings" ></ion-icon>
-            </div>
-            <div *ngIf="optionOpen" (click)="closeOption()" class="option-container">
-              <div class="option-block">
-                <!--  1  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER1')">
-                  slide 1
-                </div>
-                <!--  2  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER2')" >
-                  slide 2
-                </div>
-                <!--  3  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER3')">
-                  slide 3
-                </div>
-                <!--  4  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER4')">
-                  slide 4
-                </div>
-                <!--  5  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER5')">
-                  slide 5
-                </div>
-                <!--  6  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER6')">
-                  slide 6
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div class="image-wrapper">
-            <img [src]="post.imageUrl">
-          </div>
-        </div>
-        <div class="bottom">
-          <div class="btn-wrapper">
-            <ion-button class="like-btn">🔥 34</ion-button>
-            <ion-button class="collect-btn"> Collect</ion-button>
-            <ion-button  class="share-btn">
-              <img src="assets/icon/Share.svg">
-            </ion-button>
-          </div>
-          <div class="description-container">
-            <div class="title">
-              The Creation of EVOL
-            </div>
-            <div class="description-text">
-              The Creation of our anti-hero, a true renaissance man.
-
-              A moment of discovery - our narrative and character has been given life.
-            </div>
-          </div>
-
-          <div class="filter-container">
-            <div (click)="fliterSelected('COMMENTS')" [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' " >Comments</div>
-            <div (click)="fliterSelected('EDITIONS')" [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
-            <div (click)="fliterSelected('METADATA')" [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
-          </div>
-
-          <div class="filtered-box">
-            <div *ngIf="filterName === 'COMMENTS'"  class="comments-filter-container">
-              <div class="filter-wrapper">
-                <div class="comment-text-wrapper">
-                  <div class="commet-text">Comments <span class="commet-text total">27</span></div>
-                  <div class="avatar-wrapper">
-                    <img src="../../assets/images/post16.jpeg" alt="">
-                    <div class="actual-comment-text"> 1 hundred eth and i’m still on the grind 💪💪💪...</div>
+                    <div class="follow">.Follow</div>
                   </div>
                 </div>
               </div>
+              <div class="profile-right" (click)="openUpOption()">
+                <ion-icon name="settings"></ion-icon>
+              </div>
+              <div *ngIf="optionOpen" (click)="closeOption()" class="option-container">
+                <div class="option-block">
+                  <!--  1  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER1')">
+                    slide 1
+                  </div>
+                  <!--  2  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER2')">
+                    slide 2
+                  </div>
+                  <!--  3  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER3')">
+                    slide 3
+                  </div>
+                  <!--  4  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER4')">
+                    slide 4
+                  </div>
+                  <!--  5  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER5')">
+                    slide 5
+                  </div>
+                  <!--  6  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER6')">
+                    slide 6
+                  </div>
+                  <!--  7  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER7')">
+                    slide 7
+                  </div>
+                </div>
+  
+              </div>
             </div>
-            <div *ngIf="filterName === 'EDITIONS'" class="editions-filter-container">
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
+            <div class="image-wrapper">
+              <img [src]="post.imageUrl">
+            </div>
+              <div class="btn-wrapper desktop">
+                <ion-button class="like-btn">🔥 34</ion-button>
+                <ion-button class="collect-btn"> Collect</ion-button>
+                <ion-button class="share-btn">
+                  <img src="assets/icon/Share.svg">
+                </ion-button>
+              </div>
+  
+          </div>
+          <div class="bottom">
+            <div class="btn-wrapper phone">
+              <ion-button class="like-btn">🔥 34</ion-button>
+              <ion-button class="collect-btn"> Collect</ion-button>
+              <ion-button class="share-btn">
+                <img src="assets/icon/Share.svg">
+              </ion-button>
+            </div>
+            <div class="description-container">
+              <div class="title">
+                The Creation of EVOL
+              </div>
+              <div class="description-text">
+                The Creation of our anti-hero, a true renaissance man.
+  
+                A moment of discovery - our narrative and character has been given life.
+              </div>
+            </div>
+  
+            <div class="filter-container">
+              <div (click)="fliterSelected('COMMENTS')"
+                [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' ">Comments</div>
+              <div (click)="fliterSelected('EDITIONS')"
+                [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
+              <div (click)="fliterSelected('METADATA')"
+                [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
+            </div>
+  
+            <div class="filtered-box">
+              <div *ngIf="filterName === 'COMMENTS'" class="comments-filter-container">
+                <div class="filter-wrapper">
+                  <div class="comment-text-wrapper">
+                    <div class="commet-text">Comments <span class="commet-text total">27</span></div>
+                    <div class="avatar-wrapper">
                       <img src="../../assets/images/post16.jpeg" alt="">
-                    </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">slicedbread</div>
+                      <div class="actual-comment-text"> 1 hundred eth and i’m still on the grind 💪💪💪...</div>
                     </div>
                   </div>
-                  <div class="editions-number">Editon 1</div>
-                </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
                 </div>
               </div>
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
-                      <img src="../../assets/images/post15.jpeg" alt="">
+              <div *ngIf="filterName === 'EDITIONS'" class="editions-filter-container">
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post16.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">slicedbread</div>
+                      </div>
                     </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">slicedcheese</div>
-                    </div>
+                    <div class="editions-number">Editon 1</div>
                   </div>
-                  <div class="editions-number">Editon 2</div>
-                </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
-                      <img src="../../assets/images/post14.jpeg" alt="">
-                    </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">JohnnyWho</div>
-                    </div>
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
                   </div>
-                  <div class="editions-number">Editon 3</div>
                 </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
-                      <img src="../../assets/images/post13.jpeg" alt="">
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post15.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">slicedcheese</div>
+                      </div>
                     </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">Uknown</div>
+                    <div class="editions-number">Editon 2</div>
+                  </div>
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
+                  </div>
+                </div>
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post14.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">JohnnyWho</div>
+                      </div>
                     </div>
+                    <div class="editions-number">Editon 3</div>
                   </div>
-                  <div class="editions-number">Editon 4</div>
-                </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
-                </div>
-              </div>
-            </div>
-            <div *ngIf="filterName === 'METADATA'" class="metadata-filter-container">
-              <div class="filter-wrapper">
-                <div class="unlockable-wrapper">
-                  <img src="assets/icon/lock.svg">
-                  <span class="unlockable-text"> Unlockable Content Available</span>
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="plagiarism-text">
-                  Plagiarism Report: <span class="plagiarism-text percentage">98% Match</span>
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="royalty-title"> Royalty Split</div>
-                <div class="royalty-wrapper">
-                  <div class="user-wrapper">
-                    <img src="assets/images/post6.png" alt="">
-                    Ruz
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
                   </div>
-                  <div class="user-percentage"> 50%</div>
                 </div>
-                <div class="royalty-wrapper">
-                  <div class="user-wrapper">
-                    <img src="assets/images/post8.jpeg" alt="">
-                    You
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post13.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">Uknown</div>
+                      </div>
+                    </div>
+                    <div class="editions-number">Editon 4</div>
                   </div>
-                  <div class="user-percentage"> 50%</div>
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
+                  </div>
                 </div>
               </div>
-              <div class="filter-wrapper">
-                <div class="usesage-right-wrapper">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use license
+              <div *ngIf="filterName === 'METADATA'" class="metadata-filter-container">
+                <div class="filter-wrapper">
+                  <div class="unlockable-wrapper">
+                    <img src="assets/icon/lock.svg">
+                    <span class="unlockable-text"> Unlockable Content Available</span>
+                  </div>
                 </div>
-
+                <div class="filter-wrapper">
+                  <div class="plagiarism-text">
+                    Plagiarism Report: <span class="plagiarism-text percentage">98% Match</span>
+                  </div>
+                </div>
+                <div class="filter-wrapper">
+                  <div class="royalty-title"> Royalty Split</div>
+                  <div class="royalty-wrapper">
+                    <div class="user-wrapper">
+                      <img src="assets/images/post6.png" alt="">
+                      Ruz
+                    </div>
+                    <div class="user-percentage"> 50%</div>
+                  </div>
+                  <div class="royalty-wrapper">
+                    <div class="user-wrapper">
+                      <img src="assets/images/post8.jpeg" alt="">
+                      You
+                    </div>
+                    <div class="user-percentage"> 50%</div>
+                  </div>
+                </div>
+                <div class="filter-wrapper">
+                  <div class="usesage-right-wrapper">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use
+                    license
+                  </div>
+  
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </ng-template>
+      </ng-template>
   </swiper>
   <!--  3-->
-  <swiper
-    *ngIf="this.sliderName === 'SLIDER3'"
-    [grabCursor]="true"
-    [effect]="'creative'"
-    [creativeEffect]="{
+  <swiper *ngIf="this.sliderName === 'SLIDER3'" [grabCursor]="true" [effect]="'creative'" [creativeEffect]="{
         prev: {
           shadow: true,
           translate: ['-20%', 0, -1]
@@ -480,229 +491,240 @@
         next: {
           translate: ['100%', 0, 0]
         }
-      }"
-    class="mySwiper3"
-  >
-    <ng-template swiperSlide *ngFor="let post of postObject">
-      <div class="block" >
-        <div class="top">
-          <div class="profile-container">
-            <div class="profile-left">
-              <div class="back">
-                <ion-icon name="arrow-back"></ion-icon>
-              </div>
-              <div class="profile-wrapper">
-                <div class="image-wrapper">
-                  <img src="../../assets/images/post16.jpeg"></div>
-                <div class="profile-text-wrapper">
-                  <div class="text">Creator
-                    <div class="text bold">
-                      KidEight
+      }" class="mySwiper3">
+      <ng-template swiperSlide *ngFor="let post of postObject">
+        <div class="block">
+          <div class="top">
+            <div class="profile-container">
+              <div class="profile-left">
+                <div class="back">
+                  <ion-icon name="arrow-back"></ion-icon>
+                </div>
+                <div class="profile-wrapper">
+                  <div class="image-wrapper">
+                    <img src="../../assets/images/post16.jpeg">
+                  </div>
+                  <div class="profile-text-wrapper">
+                    <div class="text">Creator
+                      <div class="text bold">
+                        KidEight
+                      </div>
                     </div>
-                  </div>
-                  <div class="follow">.Follow</div>
-                </div>
-              </div>
-            </div>
-            <div class="profile-right" (click)="openUpOption()">
-              <ion-icon name="settings" ></ion-icon>
-            </div>
-            <div *ngIf="optionOpen" (click)="closeOption()" class="option-container">
-              <div class="option-block">
-                <!--  1  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER1')">
-                  slide 1
-                </div>
-                <!--  2  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER2')" >
-                  slide 2
-                </div>
-                <!--  3  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER3')">
-                  slide 3
-                </div>
-                <!--  4  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER4')">
-                  slide 4
-                </div>
-                <!--  5  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER5')">
-                  slide 5
-                </div>
-                <!--  6  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER6')">
-                  slide 6
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div class="image-wrapper">
-            <img [src]="post.imageUrl">
-          </div>
-        </div>
-        <div class="bottom">
-          <div class="btn-wrapper">
-            <ion-button class="like-btn">🔥 34</ion-button>
-            <ion-button class="collect-btn"> Collect</ion-button>
-            <ion-button  class="share-btn">
-              <img src="assets/icon/Share.svg">
-            </ion-button>
-          </div>
-          <div class="description-container">
-            <div class="title">
-              The Creation of EVOL
-            </div>
-            <div class="description-text">
-              The Creation of our anti-hero, a true renaissance man.
-
-              A moment of discovery - our narrative and character has been given life.
-            </div>
-          </div>
-
-          <div class="filter-container">
-            <div (click)="fliterSelected('COMMENTS')" [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' " >Comments</div>
-            <div (click)="fliterSelected('EDITIONS')" [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
-            <div (click)="fliterSelected('METADATA')" [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
-          </div>
-
-          <div class="filtered-box">
-            <div *ngIf="filterName === 'COMMENTS'"  class="comments-filter-container">
-              <div class="filter-wrapper">
-                <div class="comment-text-wrapper">
-                  <div class="commet-text">Comments <span class="commet-text total">27</span></div>
-                  <div class="avatar-wrapper">
-                    <img src="../../assets/images/post16.jpeg" alt="">
-                    <div class="actual-comment-text"> 1 hundred eth and i’m still on the grind 💪💪💪...</div>
+                    <div class="follow">.Follow</div>
                   </div>
                 </div>
               </div>
+              <div class="profile-right" (click)="openUpOption()">
+                <ion-icon name="settings"></ion-icon>
+              </div>
+              <div *ngIf="optionOpen" (click)="closeOption()" class="option-container">
+                <div class="option-block">
+                  <!--  1  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER1')">
+                    slide 1
+                  </div>
+                  <!--  2  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER2')">
+                    slide 2
+                  </div>
+                  <!--  3  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER3')">
+                    slide 3
+                  </div>
+                  <!--  4  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER4')">
+                    slide 4
+                  </div>
+                  <!--  5  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER5')">
+                    slide 5
+                  </div>
+                  <!--  6  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER6')">
+                    slide 6
+                  </div>
+                  <!--  7  -->
+                  <div class="option-wrapper" (click)="selectSilder('SLIDER7')">
+                    slide 7
+                  </div>
+                </div>
+  
+              </div>
             </div>
-            <div *ngIf="filterName === 'EDITIONS'" class="editions-filter-container">
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
+            <div class="image-wrapper">
+              <img [src]="post.imageUrl">
+            </div>
+              <div class="btn-wrapper desktop">
+                <ion-button class="like-btn">🔥 34</ion-button>
+                <ion-button class="collect-btn"> Collect</ion-button>
+                <ion-button class="share-btn">
+                  <img src="assets/icon/Share.svg">
+                </ion-button>
+              </div>
+  
+          </div>
+          <div class="bottom">
+            <div class="btn-wrapper phone">
+              <ion-button class="like-btn">🔥 34</ion-button>
+              <ion-button class="collect-btn"> Collect</ion-button>
+              <ion-button class="share-btn">
+                <img src="assets/icon/Share.svg">
+              </ion-button>
+            </div>
+            <div class="description-container">
+              <div class="title">
+                The Creation of EVOL
+              </div>
+              <div class="description-text">
+                The Creation of our anti-hero, a true renaissance man.
+  
+                A moment of discovery - our narrative and character has been given life.
+              </div>
+            </div>
+  
+            <div class="filter-container">
+              <div (click)="fliterSelected('COMMENTS')"
+                [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' ">Comments</div>
+              <div (click)="fliterSelected('EDITIONS')"
+                [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
+              <div (click)="fliterSelected('METADATA')"
+                [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
+            </div>
+  
+            <div class="filtered-box">
+              <div *ngIf="filterName === 'COMMENTS'" class="comments-filter-container">
+                <div class="filter-wrapper">
+                  <div class="comment-text-wrapper">
+                    <div class="commet-text">Comments <span class="commet-text total">27</span></div>
+                    <div class="avatar-wrapper">
                       <img src="../../assets/images/post16.jpeg" alt="">
-                    </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">slicedbread</div>
+                      <div class="actual-comment-text"> 1 hundred eth and i’m still on the grind 💪💪💪...</div>
                     </div>
                   </div>
-                  <div class="editions-number">Editon 1</div>
-                </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
                 </div>
               </div>
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
-                      <img src="../../assets/images/post15.jpeg" alt="">
+              <div *ngIf="filterName === 'EDITIONS'" class="editions-filter-container">
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post16.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">slicedbread</div>
+                      </div>
                     </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">slicedcheese</div>
-                    </div>
+                    <div class="editions-number">Editon 1</div>
                   </div>
-                  <div class="editions-number">Editon 2</div>
-                </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
-                      <img src="../../assets/images/post14.jpeg" alt="">
-                    </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">JohnnyWho</div>
-                    </div>
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
                   </div>
-                  <div class="editions-number">Editon 3</div>
                 </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="editions-wrapper">
-                  <div class="editions-container">
-                    <div class="edition-image-wrapper">
-                      <img src="../../assets/images/post13.jpeg" alt="">
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post15.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">slicedcheese</div>
+                      </div>
                     </div>
-                    <div class="edition-info">
-                      <div class="edition-text">Owned by</div>
-                      <div class="edition-text owner">Uknown</div>
+                    <div class="editions-number">Editon 2</div>
+                  </div>
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
+                  </div>
+                </div>
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post14.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">JohnnyWho</div>
+                      </div>
                     </div>
+                    <div class="editions-number">Editon 3</div>
                   </div>
-                  <div class="editions-number">Editon 4</div>
-                </div>
-                <div class="editions-wrapper">
-                  <div class="edition-btn">View on chain</div>
-                  <div class="edition-btn collect">Collect</div>
-
-                </div>
-              </div>
-            </div>
-            <div *ngIf="filterName === 'METADATA'" class="metadata-filter-container">
-              <div class="filter-wrapper">
-                <div class="unlockable-wrapper">
-                  <img src="assets/icon/lock.svg">
-                  <span class="unlockable-text"> Unlockable Content Available</span>
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="plagiarism-text">
-                  Plagiarism Report: <span class="plagiarism-text percentage">98% Match</span>
-                </div>
-              </div>
-              <div class="filter-wrapper">
-                <div class="royalty-title"> Royalty Split</div>
-                <div class="royalty-wrapper">
-                  <div class="user-wrapper">
-                    <img src="assets/images/post6.png" alt="">
-                    Ruz
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
                   </div>
-                  <div class="user-percentage"> 50%</div>
                 </div>
-                <div class="royalty-wrapper">
-                  <div class="user-wrapper">
-                    <img src="assets/images/post8.jpeg" alt="">
-                    You
+                <div class="filter-wrapper">
+                  <div class="editions-wrapper">
+                    <div class="editions-container">
+                      <div class="edition-image-wrapper">
+                        <img src="../../assets/images/post13.jpeg" alt="">
+                      </div>
+                      <div class="edition-info">
+                        <div class="edition-text">Owned by</div>
+                        <div class="edition-text owner">Uknown</div>
+                      </div>
+                    </div>
+                    <div class="editions-number">Editon 4</div>
                   </div>
-                  <div class="user-percentage"> 50%</div>
+                  <div class="editions-wrapper">
+                    <div class="edition-btn">View on chain</div>
+                    <div class="edition-btn collect">Collect</div>
+  
+                  </div>
                 </div>
               </div>
-              <div class="filter-wrapper">
-                <div class="usesage-right-wrapper">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use license
+              <div *ngIf="filterName === 'METADATA'" class="metadata-filter-container">
+                <div class="filter-wrapper">
+                  <div class="unlockable-wrapper">
+                    <img src="assets/icon/lock.svg">
+                    <span class="unlockable-text"> Unlockable Content Available</span>
+                  </div>
                 </div>
-
+                <div class="filter-wrapper">
+                  <div class="plagiarism-text">
+                    Plagiarism Report: <span class="plagiarism-text percentage">98% Match</span>
+                  </div>
+                </div>
+                <div class="filter-wrapper">
+                  <div class="royalty-title"> Royalty Split</div>
+                  <div class="royalty-wrapper">
+                    <div class="user-wrapper">
+                      <img src="assets/images/post6.png" alt="">
+                      Ruz
+                    </div>
+                    <div class="user-percentage"> 50%</div>
+                  </div>
+                  <div class="royalty-wrapper">
+                    <div class="user-wrapper">
+                      <img src="assets/images/post8.jpeg" alt="">
+                      You
+                    </div>
+                    <div class="user-percentage"> 50%</div>
+                  </div>
+                </div>
+                <div class="filter-wrapper">
+                  <div class="usesage-right-wrapper">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use
+                    license
+                  </div>
+  
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </ng-template>
+      </ng-template>
   </swiper>
   <!--  4-->
-  <swiper
-    *ngIf="this.sliderName === 'SLIDER4'"
-    [grabCursor]="true"
-    [effect]="'creative'"
-    [creativeEffect]="{
+  <swiper *ngIf="this.sliderName === 'SLIDER4'" [grabCursor]="true" [effect]="'creative'" [creativeEffect]="{
         prev: {
           shadow: true,
           translate: [0, 0, -800],
@@ -713,11 +735,9 @@
           translate: [0, 0, -800],
           rotate: [-180, 0, 0]
         }
-      }"
-    class="mySwiper4"
-  >
+      }" class="mySwiper4">
     <ng-template swiperSlide *ngFor="let post of postObject">
-      <div class="block" >
+      <div class="block">
         <div class="top">
           <div class="profile-container">
             <div class="profile-left">
@@ -726,7 +746,8 @@
               </div>
               <div class="profile-wrapper">
                 <div class="image-wrapper">
-                  <img src="../../assets/images/post16.jpeg"></div>
+                  <img src="../../assets/images/post16.jpeg">
+                </div>
                 <div class="profile-text-wrapper">
                   <div class="text">Creator
                     <div class="text bold">
@@ -738,7 +759,7 @@
               </div>
             </div>
             <div class="profile-right" (click)="openUpOption()">
-              <ion-icon name="settings" ></ion-icon>
+              <ion-icon name="settings"></ion-icon>
             </div>
             <div *ngIf="optionOpen" (click)="closeOption()" class="option-container">
               <div class="option-block">
@@ -747,7 +768,7 @@
                   slide 1
                 </div>
                 <!--  2  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER2')" >
+                <div class="option-wrapper" (click)="selectSilder('SLIDER2')">
                   slide 2
                 </div>
                 <!--  3  -->
@@ -766,6 +787,10 @@
                 <div class="option-wrapper" (click)="selectSilder('SLIDER6')">
                   slide 6
                 </div>
+                <!--  7  -->
+                <div class="option-wrapper" (click)="selectSilder('SLIDER7')">
+                  slide 7
+                </div>
               </div>
 
             </div>
@@ -778,7 +803,7 @@
           <div class="btn-wrapper">
             <ion-button class="like-btn">🔥 34</ion-button>
             <ion-button class="collect-btn"> Collect</ion-button>
-            <ion-button  class="share-btn">
+            <ion-button class="share-btn">
               <img src="assets/icon/Share.svg">
             </ion-button>
           </div>
@@ -794,13 +819,16 @@
           </div>
 
           <div class="filter-container">
-            <div (click)="fliterSelected('COMMENTS')" [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' " >Comments</div>
-            <div (click)="fliterSelected('EDITIONS')" [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
-            <div (click)="fliterSelected('METADATA')" [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
+            <div (click)="fliterSelected('COMMENTS')"
+              [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' ">Comments</div>
+            <div (click)="fliterSelected('EDITIONS')"
+              [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
+            <div (click)="fliterSelected('METADATA')"
+              [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
           </div>
 
           <div class="filtered-box">
-            <div *ngIf="filterName === 'COMMENTS'"  class="comments-filter-container">
+            <div *ngIf="filterName === 'COMMENTS'" class="comments-filter-container">
               <div class="filter-wrapper">
                 <div class="comment-text-wrapper">
                   <div class="commet-text">Comments <span class="commet-text total">27</span></div>
@@ -920,7 +948,8 @@
               </div>
               <div class="filter-wrapper">
                 <div class="usesage-right-wrapper">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use license
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use
+                  license
                 </div>
 
               </div>
@@ -931,11 +960,7 @@
     </ng-template>
   </swiper>
   <!--  5-->
-  <swiper
-    *ngIf="this.sliderName === 'SLIDER5'"
-    [grabCursor]="true"
-    [effect]="'creative'"
-    [creativeEffect]="{
+  <swiper *ngIf="this.sliderName === 'SLIDER5'" [grabCursor]="true" [effect]="'creative'" [creativeEffect]="{
         prev: {
           shadow: true,
           translate: ['-125%', 0, -800],
@@ -946,11 +971,9 @@
           translate: ['125%', 0, -800],
           rotate: [0, 0, 90]
         }
-      }"
-    class="mySwiper5"
-  >
+      }" class="mySwiper5">
     <ng-template swiperSlide *ngFor="let post of postObject">
-      <div class="block" >
+      <div class="block">
         <div class="top">
           <div class="profile-container">
             <div class="profile-left">
@@ -959,7 +982,8 @@
               </div>
               <div class="profile-wrapper">
                 <div class="image-wrapper">
-                  <img src="../../assets/images/post16.jpeg"></div>
+                  <img src="../../assets/images/post16.jpeg">
+                </div>
                 <div class="profile-text-wrapper">
                   <div class="text">Creator
                     <div class="text bold">
@@ -971,7 +995,7 @@
               </div>
             </div>
             <div class="profile-right" (click)="openUpOption()">
-              <ion-icon name="settings" ></ion-icon>
+              <ion-icon name="settings"></ion-icon>
             </div>
             <div *ngIf="optionOpen" (click)="closeOption()" class="option-container">
               <div class="option-block">
@@ -980,7 +1004,7 @@
                   slide 1
                 </div>
                 <!--  2  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER2')" >
+                <div class="option-wrapper" (click)="selectSilder('SLIDER2')">
                   slide 2
                 </div>
                 <!--  3  -->
@@ -999,6 +1023,10 @@
                 <div class="option-wrapper" (click)="selectSilder('SLIDER6')">
                   slide 6
                 </div>
+                <!--  7  -->
+                <div class="option-wrapper" (click)="selectSilder('SLIDER7')">
+                  slide 7
+                </div>
               </div>
 
             </div>
@@ -1011,7 +1039,7 @@
           <div class="btn-wrapper">
             <ion-button class="like-btn">🔥 34</ion-button>
             <ion-button class="collect-btn"> Collect</ion-button>
-            <ion-button  class="share-btn">
+            <ion-button class="share-btn">
               <img src="assets/icon/Share.svg">
             </ion-button>
           </div>
@@ -1027,13 +1055,16 @@
           </div>
 
           <div class="filter-container">
-            <div (click)="fliterSelected('COMMENTS')" [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' " >Comments</div>
-            <div (click)="fliterSelected('EDITIONS')" [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
-            <div (click)="fliterSelected('METADATA')" [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
+            <div (click)="fliterSelected('COMMENTS')"
+              [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' ">Comments</div>
+            <div (click)="fliterSelected('EDITIONS')"
+              [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
+            <div (click)="fliterSelected('METADATA')"
+              [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
           </div>
 
           <div class="filtered-box">
-            <div *ngIf="filterName === 'COMMENTS'"  class="comments-filter-container">
+            <div *ngIf="filterName === 'COMMENTS'" class="comments-filter-container">
               <div class="filter-wrapper">
                 <div class="comment-text-wrapper">
                   <div class="commet-text">Comments <span class="commet-text total">27</span></div>
@@ -1153,7 +1184,8 @@
               </div>
               <div class="filter-wrapper">
                 <div class="usesage-right-wrapper">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use license
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use
+                  license
                 </div>
 
               </div>
@@ -1164,11 +1196,7 @@
     </ng-template>
   </swiper>
   <!--  6-->
-  <swiper
-    *ngIf="this.sliderName === 'SLIDER6'"
-    [grabCursor]="true"
-    [effect]="'creative'"
-    [creativeEffect]="{
+  <swiper *ngIf="this.sliderName === 'SLIDER6'" [grabCursor]="true" [effect]="'creative'" [creativeEffect]="{
         prev: {
           shadow: true,
           origin: 'left center',
@@ -1180,11 +1208,9 @@
           translate: ['5%', 0, -200],
           rotate: [0, -100, 0]
         }
-      }"
-    class="mySwiper6"
-  >
+      }" class="mySwiper6">
     <ng-template swiperSlide *ngFor="let post of postObject">
-      <div class="block" >
+      <div class="block">
         <div class="top">
           <div class="profile-container">
             <div class="profile-left">
@@ -1193,7 +1219,8 @@
               </div>
               <div class="profile-wrapper">
                 <div class="image-wrapper">
-                  <img src="../../assets/images/post16.jpeg"></div>
+                  <img src="../../assets/images/post16.jpeg">
+                </div>
                 <div class="profile-text-wrapper">
                   <div class="text">Creator
                     <div class="text bold">
@@ -1205,7 +1232,7 @@
               </div>
             </div>
             <div class="profile-right" (click)="openUpOption()">
-              <ion-icon name="settings" ></ion-icon>
+              <ion-icon name="settings"></ion-icon>
             </div>
             <div *ngIf="optionOpen" (click)="closeOption()" class="option-container">
               <div class="option-block">
@@ -1214,7 +1241,7 @@
                   slide 1
                 </div>
                 <!--  2  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER2')" >
+                <div class="option-wrapper" (click)="selectSilder('SLIDER2')">
                   slide 2
                 </div>
                 <!--  3  -->
@@ -1233,6 +1260,10 @@
                 <div class="option-wrapper" (click)="selectSilder('SLIDER6')">
                   slide 6
                 </div>
+                <!--  7  -->
+                <div class="option-wrapper" (click)="selectSilder('SLIDER7')">
+                  slide 7
+                </div>
               </div>
 
             </div>
@@ -1245,7 +1276,7 @@
           <div class="btn-wrapper">
             <ion-button class="like-btn">🔥 34</ion-button>
             <ion-button class="collect-btn"> Collect</ion-button>
-            <ion-button  class="share-btn">
+            <ion-button class="share-btn">
               <img src="assets/icon/Share.svg">
             </ion-button>
           </div>
@@ -1261,13 +1292,16 @@
           </div>
 
           <div class="filter-container">
-            <div (click)="fliterSelected('COMMENTS')" [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' " >Comments</div>
-            <div (click)="fliterSelected('EDITIONS')" [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
-            <div (click)="fliterSelected('METADATA')" [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
+            <div (click)="fliterSelected('COMMENTS')"
+              [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' ">Comments</div>
+            <div (click)="fliterSelected('EDITIONS')"
+              [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
+            <div (click)="fliterSelected('METADATA')"
+              [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
           </div>
 
           <div class="filtered-box">
-            <div *ngIf="filterName === 'COMMENTS'"  class="comments-filter-container">
+            <div *ngIf="filterName === 'COMMENTS'" class="comments-filter-container">
               <div class="filter-wrapper">
                 <div class="comment-text-wrapper">
                   <div class="commet-text">Comments <span class="commet-text total">27</span></div>
@@ -1387,7 +1421,8 @@
               </div>
               <div class="filter-wrapper">
                 <div class="usesage-right-wrapper">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use license
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use
+                  license
                 </div>
 
               </div>
@@ -1398,16 +1433,11 @@
     </ng-template>
   </swiper>
   <!--  7-->
-  <swiper
-    *ngIf="this.sliderName === 'SLIDER7'"
-    [direction]="'vertical'"
-    [pagination]="{
+  <swiper *ngIf="this.sliderName === 'SLIDER7'" [direction]="'vertical'" [pagination]="{
       clickable: true
-    }"
-    class="mySwiper"
-  >
+    }" class="mySwiper">
     <ng-template swiperSlide *ngFor="let post of postObject">
-      <div class="block" >
+      <div class="block">
         <div class="top">
           <div class="profile-container">
             <div class="profile-left">
@@ -1416,7 +1446,8 @@
               </div>
               <div class="profile-wrapper">
                 <div class="image-wrapper">
-                  <img src="../../assets/images/post16.jpeg"></div>
+                  <img src="../../assets/images/post16.jpeg">
+                </div>
                 <div class="profile-text-wrapper">
                   <div class="text">Creator
                     <div class="text bold">
@@ -1428,7 +1459,7 @@
               </div>
             </div>
             <div class="profile-right" (click)="openUpOption()">
-              <ion-icon name="settings" ></ion-icon>
+              <ion-icon name="settings"></ion-icon>
             </div>
             <div *ngIf="optionOpen" (click)="closeOption()" class="option-container">
               <div class="option-block">
@@ -1437,7 +1468,7 @@
                   slide 1
                 </div>
                 <!--  2  -->
-                <div class="option-wrapper" (click)="selectSilder('SLIDER2')" >
+                <div class="option-wrapper" (click)="selectSilder('SLIDER2')">
                   slide 2
                 </div>
                 <!--  3  -->
@@ -1456,6 +1487,10 @@
                 <div class="option-wrapper" (click)="selectSilder('SLIDER6')">
                   slide 6
                 </div>
+                <!--  7  -->
+                <div class="option-wrapper" (click)="selectSilder('SLIDER7')">
+                  slide 7
+                </div>
               </div>
 
             </div>
@@ -1463,12 +1498,20 @@
           <div class="image-wrapper">
             <img [src]="post.imageUrl">
           </div>
+            <div class="btn-wrapper desktop">
+              <ion-button class="like-btn">🔥 34</ion-button>
+              <ion-button class="collect-btn"> Collect</ion-button>
+              <ion-button class="share-btn">
+                <img src="assets/icon/Share.svg">
+              </ion-button>
+            </div>
+
         </div>
         <div class="bottom">
-          <div class="btn-wrapper">
+          <div class="btn-wrapper phone">
             <ion-button class="like-btn">🔥 34</ion-button>
             <ion-button class="collect-btn"> Collect</ion-button>
-            <ion-button  class="share-btn">
+            <ion-button class="share-btn">
               <img src="assets/icon/Share.svg">
             </ion-button>
           </div>
@@ -1484,13 +1527,16 @@
           </div>
 
           <div class="filter-container">
-            <div (click)="fliterSelected('COMMENTS')" [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' " >Comments</div>
-            <div (click)="fliterSelected('EDITIONS')" [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
-            <div (click)="fliterSelected('METADATA')" [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
+            <div (click)="fliterSelected('COMMENTS')"
+              [ngClass]="filterName === 'COMMENTS' ? 'filter-block active' : 'filter-block' ">Comments</div>
+            <div (click)="fliterSelected('EDITIONS')"
+              [ngClass]="filterName === 'EDITIONS' ? 'filter-block active' : 'filter-block' ">Editions</div>
+            <div (click)="fliterSelected('METADATA')"
+              [ngClass]="filterName === 'METADATA' ? 'filter-block active' : 'filter-block' ">Metadata</div>
           </div>
 
           <div class="filtered-box">
-            <div *ngIf="filterName === 'COMMENTS'"  class="comments-filter-container">
+            <div *ngIf="filterName === 'COMMENTS'" class="comments-filter-container">
               <div class="filter-wrapper">
                 <div class="comment-text-wrapper">
                   <div class="commet-text">Comments <span class="commet-text total">27</span></div>
@@ -1610,7 +1656,8 @@
               </div>
               <div class="filter-wrapper">
                 <div class="usesage-right-wrapper">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use license
+                  <ion-icon name="checkmark-circle-outline"></ion-icon>The first edition is protected by a personal use
+                  license
                 </div>
 
               </div>
@@ -1620,5 +1667,6 @@
       </div>
     </ng-template>
   </swiper>
+
 
 </ion-content>
