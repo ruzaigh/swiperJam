@@ -1,7 +1,15 @@
 <ion-content [fullscreen]="true">
-  <swiper [autoplay]="true" [keyboard]="true" [pagination]="true" [scrollbar]="true" [zoom]="true">
-    <ng-template swiperSlide>Slide 1</ng-template>
+  <swiper [config]="config" class="mySwiper" (slideChange)="indexChanged()">
+    <ng-template swiperSlide>
+      Slide 1      
+    </ng-template>
+    <ng-template  swiperSlide>Slide 2</ng-template>
     <ng-template swiperSlide>Slide 3</ng-template>
-    <ng-template swiperSlide>Slide 3</ng-template>
+    <ng-template swiperSlide>Slide 4</ng-template>
+    <ng-template swiperSlide>Slide 5</ng-template>
+    <ng-template swiperSlide>Slide 6</ng-template>
+    <ng-template swiperSlide>Slide 7</ng-template>
+    <ng-template swiperSlide>Slide 8</ng-template>
+    <ng-template swiperSlide>Slide 9</ng-template>
   </swiper>
 </ion-content>

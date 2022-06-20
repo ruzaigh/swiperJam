@@ -1,10 +1,10 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import SwiperCore, { EffectCreative,EffectCards } from 'swiper';
+import SwiperCore, { EffectCreative,EffectCards,Pagination } from 'swiper';
 
 // install Swiper modules
 SwiperCore.use([EffectCreative]);
 SwiperCore.use([EffectCards]);
-
+SwiperCore.use([Pagination]);
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -75,9 +75,15 @@ export class Tab2Page {
     if(slideSelect === 'SLIDER5')  {this.sliderName = slideSelect;}
     if(slideSelect === 'SLIDER6')  {this.sliderName = slideSelect;}
     if(slideSelect === 'SLIDER7')  {this.sliderName = slideSelect;}
+    if(slideSelect === 'SLIDER8')  {this.sliderName = slideSelect;}
     this.optionOpen = false;
   }
-
+  pagination ={
+    clickable: true,
+    renderBullet : function(index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    }
+  }
   fliterSelected(name:  string){
     if(name === 'COMMENTS') return this.filterName = name;
     if(name === 'EDITIONS') return this.filterName = name;
